@@ -4,5 +4,6 @@ from django.shortcuts import render
 
 @login_required
 def index(request):
-    return render(request, 'homepage/index.html')
+    data = {'user': request.user}
+    return render(request, 'homepage/index.html', context=data)
 

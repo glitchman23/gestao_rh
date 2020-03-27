@@ -2,7 +2,22 @@
 
 {% block main %}
 
-    Welcome
+    <div class="row">
+        <div class="col-sm">
+            Hello, {{ user.employee.name }}
+        </div>
+        <div class="col-sm">
+            {% if user.employee.company.id %}
+                <a href="{% url 'company_update' user.employee.company.id %}">Update Company</a>
+                <a href="{% url 'employee_list' %}">Employees</a>
+            {% else %}
+                <a href="{% url 'company_create' %}">Create Company</a>
+            {% endif %}
+        </div>
+        <div class="col-sm">
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
 
 {% endblock %}
 
