@@ -7,7 +7,7 @@ SECRET_KEY = '+gvpn9j-7f_%s%w**w85vkb%3p*v^((y!#%^$@s5s+6z%1*%zl'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-3-86-47-131.compute-1.amazonaws.com']
 
 
 INSTALLED_APPS = [
